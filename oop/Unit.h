@@ -6,7 +6,7 @@ class Unit
 {
 public:
     Unit(const std::string& name);
-    ~Unit();
+    virtual ~Unit();
 
     std::string getName() const;
 
