@@ -9,6 +9,7 @@ int main()
     // Mage mage("Susan Woe");
 
     soldier.print();
+    std::cout << "name: " << soldier.name << std::endl;
     // mage.print();
 
     return 0;
