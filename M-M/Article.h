@@ -5,7 +5,7 @@
 class Article
 {
 public:
-    Article(int id, Manager& manager);
+    Article(Manager& manager);
     ~Article();
 
     int getId() const;
@@ -13,5 +13,7 @@ public:
 
 private:
     static int id;
+    
+    int innerId;
     Manager& manager;
 };

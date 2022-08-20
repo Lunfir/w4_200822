@@ -2,12 +2,13 @@
 
 #include "Article.h"
 
-int Article::id = 12;
+int Article::id = 0;
 
-Article::Article(int id, Manager& manager)
+Article::Article(Manager& manager)
     : manager(manager)
 {
-    this->id = id;
+    Article::id += 1;
+    this->innerId = Article::id;
 }
 
 Article::~Article()
@@ -17,24 +18,24 @@ Article::~Article()
 
 int Article::getId() const
 {
-    return this->id;
+    return this->innerId;
 }
 
 
 void Article::print() const
 {
-    std::cout << "Article: " << this->id << " ---> ";
+    std::cout << "Article: " << this->innerId << " ---> ";
 
-    if (manager.getLikes(this->id).empty())
+    if (manager.getLikes(this->innerId).empty())
     {
         return;
     }
 
-    int limit = manager.getLikes(this->id).size() - 1;
+    int limit = manager.getLikes(this->innerId).size() - 1;
     for (int i = 0; i < limit; i++)
     {
-        std::cout << manager.getLikes(this->id).at(i) << ", ";
+        std::cout << manager.getLikes(this->innerId).at(i) << ", ";
     }
 
-    std::cout << manager.getLikes(this->id).at(limit) << std::endl;
+    std::cout << manager.getLikes(this->innerId).at(limit) << std::endl;
 }
