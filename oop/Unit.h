@@ -10,7 +10,8 @@ public:
 
     std::string getName() const;
 
-    virtual void attack();
+    // pure virtual
+    virtual void attack() = 0;
 
 protected:
     std::string name;

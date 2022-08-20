@@ -13,13 +13,3 @@ public:
     void attack() override;
     void print();
 };
-
-//     Unit
-
-// Soldier     Mage
-    
-//     Viking
-
-//     Unit --> Soldier
-//     Unit --> Mage
-//     Viking
