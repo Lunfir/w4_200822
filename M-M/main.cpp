@@ -22,7 +22,7 @@ int main()
     user2.like(art2);
     user2.like(art3);
 
-    // user2.like(art1, art2, art3);
+    // TODO: user2.like({art1, art2, art3});
 
     user1.print();
     user2.print();
