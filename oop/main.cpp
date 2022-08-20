@@ -1,21 +1,26 @@
 #include <iostream>
+#include <vector>
 
 #include "Mage.h"
 #include "Soldier.h"
 
 int main()
 {
-    Soldier soldier("John Doe");
-    Mage mage("Susan Woe");
-    Unit unit("Unit unit");
+    std::vector<Unit*> army;
 
-    soldier.attack();
-    mage.attack();
-    unit.attack();
+    army.push_back(new Soldier("John Doe"));
+    army.push_back(new Mage("Susan Woe"));
+    army.push_back(new Unit("Unit unit"));
 
-    // soldier.print();
-    // std::cout << "name: " << soldier.name << std::endl;
-    // mage.print();
+    for (Unit* unit : army)
+    {
+        unit->attack();
+    }
+
+    for (Unit* unit : army)
+    {
+        delete unit;
+    }
 
     return 0;
 }
