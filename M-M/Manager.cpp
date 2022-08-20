@@ -1,13 +1,10 @@
 #include "Manager.h"
 
-Manager::Manager()
+Manager& Manager::getInstance()
 {
-
-}
-
-Manager::~Manager()
-{
-
+    static Manager manager;
+    
+    return manager;
 }
 
 void Manager::likeArticle(int userID, int artID)

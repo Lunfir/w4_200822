@@ -6,17 +6,8 @@
 
 int main()
 {
-    // Article art1, art2, art3;
-    // User user1, user2;
-
-    Manager manager;
-    Article art1(manager);
-
-    Article art2(manager);
-
-    Article art3(manager);
-    User user1(manager);
-    User user2(manager);
+    Article art1, art2, art3;
+    User user1, user2;
 
     user1.like(art1);
 
