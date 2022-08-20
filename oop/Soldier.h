@@ -5,8 +5,6 @@
 #include "Unit.h"
 
 class Soldier : public Unit
-// class Soldier : protected Unit // name ---> protected
-// class Soldier : private Unit
 {
 public:
     Soldier(const std::string& name);

@@ -13,10 +13,10 @@ Soldier::~Soldier()
 
 void Soldier::attack()
 {
-    std::cout << "i'm attacking... " << std::endl; 
+    std::cout << "i'm attacking... " << __PRETTY_FUNCTION__ << std::endl;
 }
 
 void Soldier::print()
 {
-    std::cout << "Soldier: " << this->name << std::endl;
+    std::cout << "Soldier: " << this->getName() << std::endl;
 }

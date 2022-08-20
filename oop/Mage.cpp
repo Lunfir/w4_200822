@@ -13,10 +13,10 @@ Mage::~Mage()
 
 void Mage::attack()
 {
-    std::cout << "i'm attacking... " << std::endl; 
+    std::cout << "i'm attacking... " << __PRETTY_FUNCTION__ << std::endl;
 }
 
 void Mage::print()
 {
-    std::cout << "Mage: " << this->name << std::endl;
+    std::cout << "Mage: " << this->getName() << std::endl;
 }

@@ -8,5 +8,10 @@ public:
     Unit(const std::string& name);
     ~Unit();
 
+    std::string getName() const;
+
+    void attack();
+
+protected:
     std::string name;
 };

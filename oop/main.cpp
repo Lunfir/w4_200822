@@ -6,10 +6,15 @@
 int main()
 {
     Soldier soldier("John Doe");
-    // Mage mage("Susan Woe");
+    Mage mage("Susan Woe");
+    Unit unit("Unit unit");
 
-    soldier.print();
-    std::cout << "name: " << soldier.name << std::endl;
+    soldier.attack();
+    mage.attack();
+    unit.attack();
+
+    // soldier.print();
+    // std::cout << "name: " << soldier.name << std::endl;
     // mage.print();
 
     return 0;
