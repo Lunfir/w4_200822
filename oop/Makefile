@@ -7,10 +7,13 @@ mage:
 soldier:
 	g++ -c Soldier.cpp -o Soldier.o
 
+viking:
+	g++ -c Viking.cpp -o Viking.o
+
 main: main.cpp
 	g++ -c main.cpp -o main.o
 
-all: unit mage soldier main
+all: unit mage soldier viking main
 	g++ *.o -o main.exe
 
 clear:

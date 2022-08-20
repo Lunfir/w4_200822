@@ -4,12 +4,12 @@
 
 #include "Unit.h"
 
-class Soldier : public Unit
+class Soldier : virtual public Unit
 {
 public:
     Soldier(const std::string& name);
     ~Soldier();
 
-    void attack() override;
+    // void attack() override;
     void print();
 };

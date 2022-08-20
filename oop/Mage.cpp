@@ -11,10 +11,10 @@ Mage::~Mage()
     std::cout << __PRETTY_FUNCTION__ << std::endl;
 }
 
-void Mage::attack()
-{
-    std::cout << "i'm attacking... " << __PRETTY_FUNCTION__ << std::endl;
-}
+// void Mage::attack()
+// {
+//     std::cout << "i'm attacking... " << __PRETTY_FUNCTION__ << std::endl;
+// }
 
 void Mage::print()
 {
