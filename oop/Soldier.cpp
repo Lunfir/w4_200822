@@ -1,13 +1,14 @@
 #include "Soldier.h"
 
 Soldier::Soldier(const std::string& name)
+    : Unit(name)
 {
-    this->name = name;
+    std::cout << __PRETTY_FUNCTION__ << std::endl;
 }
 
 Soldier::~Soldier()
 {
-
+    std::cout << __PRETTY_FUNCTION__ << std::endl;
 }
 
 void Soldier::attack()

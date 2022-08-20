@@ -6,10 +6,10 @@
 int main()
 {
     Soldier soldier("John Doe");
-    Mage mage("Susan Woe");
+    // Mage mage("Susan Woe");
 
     soldier.print();
-    mage.print();
+    // mage.print();
 
     return 0;
 }

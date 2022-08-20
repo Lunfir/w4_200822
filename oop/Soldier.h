@@ -2,7 +2,9 @@
 #include <iostream>
 #include <string>
 
-class Soldier
+#include "Unit.h"
+
+class Soldier : public Unit
 {
 public:
     Soldier(const std::string& name);
@@ -10,7 +12,4 @@ public:
 
     void attack();
     void print();
-
-private:
-    std::string name;
 };

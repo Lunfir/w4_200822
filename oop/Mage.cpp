@@ -1,13 +1,14 @@
 #include "Mage.h"
 
 Mage::Mage(const std::string& name)
+    : Unit(name)
 {
-    this->name = name;
+    std::cout << __PRETTY_FUNCTION__ << std::endl;
 }
 
 Mage::~Mage()
 {
-
+    std::cout << __PRETTY_FUNCTION__ << std::endl;
 }
 
 void Mage::attack()

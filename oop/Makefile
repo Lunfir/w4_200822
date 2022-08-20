@@ -1,3 +1,6 @@
+unit:
+	g++ -c Unit.cpp -o Unit.o
+
 mage:
 	g++ -c Mage.cpp -o Mage.o
 
@@ -7,7 +10,7 @@ soldier:
 main: main.cpp
 	g++ -c main.cpp -o main.o
 
-all: mage soldier main
+all: unit mage soldier main
 	g++ *.o -o main.exe
 
 clear:
