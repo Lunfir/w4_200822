@@ -28,6 +28,11 @@ void User::print() const
 {
     std::cout << "User: " << this->id << " ---> ";
 
+    if (manager.getFavourites(this->id).empty())
+    {
+        return;
+    }
+
     int limit = manager.getFavourites(this->id).size() - 1;
     for (int i = 0; i < limit; i++)
     {

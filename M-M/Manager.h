@@ -12,8 +12,8 @@ public:
 
     void likeArticle(int userID, int artID);
 
-    const std::vector<int>& getFavourites(int userID) const;
-    const std::vector<int>& getLikes(int artID) const;
+    std::vector<int> getFavourites(int userID) const;
+    std::vector<int> getLikes(int artID) const;
 
 private:
     std::unordered_map<int, std::vector<int>> favourites;

@@ -12,6 +12,6 @@ public:
     void print() const;
 
 private:
-    int id;
+    static int id;
     Manager& manager;
 };

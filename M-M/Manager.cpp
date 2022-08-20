@@ -28,12 +28,35 @@ void Manager::likeArticle(int userID, int artID)
     likes[artID].push_back(userID);
 }
 
-const std::vector<int>& Manager::getFavourites(int userID) const
+std::vector<int> Manager::getFavourites(int userID) const
 {
+    // if (favourites.contains(userID))
+    // {
+    //     return favourites.at(userID);
+    // }
+
+    // return std::vector<int>();
+
+    if (favourites.find(userID) == favourites.end())
+    {
+        return std::vector<int>();
+    }
+
     return favourites.at(userID);
 }
 
-const std::vector<int>& Manager::getLikes(int artID) const
+std::vector<int> Manager::getLikes(int artID) const
 {
+    // if (likes.contains(artID))
+    // {
+    //     return likes.at(artID);
+    // }
+
+    // return std::vector<int>();
+    if (likes.find(artID) == likes.end())
+    {
+        return std::vector<int>();
+    }
+
     return likes.at(artID);
 }
