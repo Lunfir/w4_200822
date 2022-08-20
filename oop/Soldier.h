@@ -10,6 +10,6 @@ public:
     Soldier(const std::string& name);
     ~Soldier();
 
-    // void attack() override;
+    void attack() override;
     void print();
 };

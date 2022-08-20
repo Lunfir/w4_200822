@@ -10,6 +10,6 @@ public:
     Mage(const std::string& name);
     ~Mage();
 
-    // void attack() override;
+    void attack() override;
     void print();
 };
