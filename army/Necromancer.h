@@ -1,25 +1,29 @@
 #pragma once
 #include <iostream>
+#include <string>
 
 #include "ISpellCaster.h"
 
 class Necromancer : public ISpellCaster
 {
 public:
-    Necromancer();
+    Necromancer(const std::string& name, int hp
+                , int pAttackPoint, int mAttackPoint);
     ~Necromancer();
 
-    // // ISpellCaster overrides
-    // virtual void mAttack(IUnit& enemy) = 0;
-    // virtual int getMAttack() const = 0;
+    // ISpellCaster overrides
+    void mAttack(IUnit& enemy) override;
+    int getMAttack() const override;
 
-    // // IUnit overrides
-    // virtual void pAttack(IUnit& enemy) = 0;
-    // virtual void takePAttack(IUnit& enemy) = 0;
-    // virtual void counterAttack(IUnit& enemy) = 0;
-    // virtual void takeCounterAttack(IUnit& enemy) = 0;
+    // IUnit overrides
+    void pAttack(IUnit& enemy) override;
+    void takePAttack(IUnit& enemy) override;
+    void takeMAttack(ISpellCaster& enemy) override;
+    void counterAttack(IUnit& enemy) override;
+    void takeCounterAttack(IUnit& enemy) override;
+    int getPAttack() const override;
 
-    // virtual int getPAttack() const = 0;
+    void print();
 
 private:
     std::string name;

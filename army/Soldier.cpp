@@ -73,6 +73,6 @@ void Soldier::print()
 {
     std::cout   << "Soldier: " << this->name 
                 << " hp: " << this->hp 
-                << "  pAttackPoint: " << this->pAttackPoint
+                << "  pAttack: " << this->pAttackPoint
                 << std::endl;
 }
