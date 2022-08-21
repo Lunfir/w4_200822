@@ -20,6 +20,8 @@ public:
 
     const Spell* getSpell(SPELL spell) const;
 
+    // addSpell(Spell& spell) 
+
 private:
     SpellManager();
     SpellManager(const SpellManager& other) = delete;

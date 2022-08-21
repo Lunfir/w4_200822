@@ -1,9 +1,11 @@
 #pragma once
 #include <iostream>
 
+#include "IObservable.h"
+
 class ISpellCaster;
 
-class IUnit
+class IUnit : public IObservable
 {
 public:
     virtual void pAttack(IUnit& enemy) = 0;
@@ -13,4 +15,5 @@ public:
     virtual void takeCounterAttack(IUnit& enemy) = 0;
 
     virtual int getPAttack() const = 0;
+    virtual int getMaxHp() const = 0;
 };
