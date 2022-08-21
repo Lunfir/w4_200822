@@ -13,12 +13,15 @@ int main()
     susan->print();
     guldan->print();
 
+    guldan->mAttack(*john);
+
     // john->pAttack(*susan);
     // john->pAttack(*susan);
     // john->pAttack(*susan);
     // john->pAttack(*susan);
 
-    // john->print();
+    john->print();
+    guldan->print();
     // susan->print();
 
     delete john;
