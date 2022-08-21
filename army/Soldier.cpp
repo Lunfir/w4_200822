@@ -1,5 +1,7 @@
 #include "Soldier.h"
 
+#include "ISpellCaster.h"
+
 Soldier::Soldier(const std::string& name, int hp, int pAttackPoint)
     : name(name)
     , hp(hp)
@@ -32,6 +34,18 @@ void Soldier::takePAttack(IUnit& enemy)
     }
 
     this->counterAttack(enemy);
+}
+
+void Soldier::takeMAttack(ISpellCaster& enemy)
+{
+    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    this->hp -= enemy.getMAttack();
+
+    if (this->hp <= 0)
+    {
+        std::cout << this->name << " is dead" << std::endl;
+        return;
+    }
 }
 
 void Soldier::counterAttack(IUnit& enemy)

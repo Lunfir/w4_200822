@@ -12,6 +12,7 @@ public:
 
     void pAttack(IUnit& enemy) override;
     void takePAttack(IUnit& enemy) override;
+    void takeMAttack(ISpellCaster& enemy) override;
     void counterAttack(IUnit& enemy) override;
     void takeCounterAttack(IUnit& enemy) override;
     int getPAttack() const override;
