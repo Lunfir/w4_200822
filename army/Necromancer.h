@@ -3,6 +3,7 @@
 #include <string>
 
 #include "ISpellCaster.h"
+#include "SpellManager.h"
 
 class Necromancer : public ISpellCaster
 {
@@ -30,4 +31,5 @@ private:
     int hp;
     int pAttackPoint;
     int mAttackPoint;
+    int mAttackPointDefault;
 };

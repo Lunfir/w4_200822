@@ -6,6 +6,7 @@ Necromancer::Necromancer(const std::string& name, int hp
     , hp(hp)
     , pAttackPoint(pAttackPoint)
     , mAttackPoint(mAttackPoint)
+    , mAttackPointDefault(mAttackPoint)
 {
 
 }
@@ -17,7 +18,23 @@ Necromancer::~Necromancer()
 
 void Necromancer::mAttack(IUnit& enemy)
 {
+    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    const Spell* spell = SpellManager::getInstance().getSpell(SPELL::Wrath);
+    if (spell == nullptr)
+    {
+        std::cout << "Cannot cast this spell..." << std::endl;
+        return;
+    }
+
+    std::cout << "spell: " << spell->getName() << " m: " << spell->getMultiplier() << std::endl;
+    
+    // apply multiplier to mAttackPoint
+    this->mAttackPoint *= spell->getMultiplier();
+    
     enemy.takeMAttack(*this);
+
+    // reset to defaults
+    this->mAttackPoint = this->mAttackPointDefault;
 }
 
 int Necromancer::getMAttack() const
