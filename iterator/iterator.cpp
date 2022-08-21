@@ -1,10 +1,14 @@
 #include <iostream>
 #include <array>
+#include <vector>
+#include <set>
 
+
+template<typename T>
 class Iterator
 {
 public:
-    Iterator(const std::array<int, 7>& arr)
+    Iterator(const T& arr)
         : array(arr)
     {
         index = 0;
@@ -55,15 +59,23 @@ public:
     }
 
 private:
-    const std::array<int, 7>& array;
+    const T& array;
     int index;
 };
 
 int main()
 {
-    std::array<int, 7> arr = { 12, 23, 12, 34, 1, 2, 5 };
+    // compilation error: 
+    // std::set<int> arr = { 12, 23, 12, 34, 1, 2, 5, 34, 12312 };
+    // Iterator<std::set<int>> iter(arr);
 
-    for ( Iterator iter(arr); iter != iter.end(); ++iter )
+    // std::array<int, 9> arr = { 12, 23, 12, 34, 1, 2, 5, 34, 12312 };
+    // Iterator<std::array<int, 9>> iter(arr);
+
+    std::vector<int> arr = { 12, 23, 12, 34, 1, 2, 5, 34, 12312 };
+    Iterator<std::vector<int>> iter(arr);
+
+    for ( ; iter != iter.end(); ++iter )
     {
         std::cout << *iter << std::endl;
     }
